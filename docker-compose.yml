@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: e-commerce-postgres
+    environment:
+      POSTGRES_USER: santi
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: db_tienda
+    ports:
+      - "5431:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - postgres_network
+
+volumes:
+  postgres_data:
+
+networks:
+  postgres_network:
+    driver: bridge

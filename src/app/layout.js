@@ -1,3 +1,5 @@
+import NavBar from "@/src/app/ui/components/NavBar/NavBar"
+
 
 export const metadata = {
   title: "E-commerce",
@@ -8,7 +10,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body>
+
+        <div>
+          <NavBar />
+        </div>
+
+        <div>
         {children}
+        </div>
       </body>
     </html>
   );
